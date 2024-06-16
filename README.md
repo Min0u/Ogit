@@ -1,38 +1,32 @@
 # projet-pf-2022-2023-ogit
-Projet de programmation fonctionnelle L3 info Valrose - Mini git en OCaml
+Functional Programming Project L3 Computer Science Valrose - Mini git in OCaml
 
 https://docs.google.com/document/d/1OtQM95PCcBlJC8e2BRh-VQypuq-xDqIrDWZYESsvR9w/edit?usp=sharing
 
 ## FEATURES
-Un git simplifié programmé en Ocaml.
+A simplified git programmed in OCaml.
 
 ## TESTS
-Les tests ont été effectués dans ogit/test, certaines fonctions ont été aussi testé manuellement via des exemples.
+Tests were conducted in `ogit/test`, with some functions also tested manually via examples.
 
-Objects: l'ensemble des tests ont été validé mis à part pour merge_work_directory_I, et le soucis d'affichage de tree (à cause de Sys.readdir).
+Objects: All tests were validated except for `merge_work_directory_I`, and there was an issue displaying `tree` (due to `Sys.readdir`).
 
-
-Logs: Le dune runtest ne renvoie rien. *
+Logs: `dune runtest` does not return anything. *
 
 Commands:
-Dune runtest ne renvoyait rien avant de faire ogit_checkout
+`dune runtest` did not return anything before running `ogit_checkout`.
 
-Donc l'ordre des erreurs de tests est la suivante:  merge_work_directory_I => ogit_checkout et la suite de commands.ml
+Therefore, the order of test errors is as follows: `merge_work_directory_I` => `ogit_checkout` and the rest of `commands.ml`.
 
-*Nous sommes également conscient que la validation des tests dans ogit/test ne reflètent pas complètement l'indéfectibilité des fonctions.
-Il faut ajouter à cela des tests encore plus rigoureux (difficiles à trouver) auquelles certaines fonctions donnent des réponses négatives. (KNOWN ISSUES)
-
+*We are also aware that passing the tests in `ogit/test` does not completely reflect the infallibility of the functions. Additional, more rigorous tests (which are difficult to find) are needed, to which some functions provide negative responses. (KNOWN ISSUES)
 
 ## KNOWN ISSUES
 Objects:
-clean_work_directory: Nous n'avons pas réussi à traiter le cas du fichier versionné à conserver dans les sous-repertoires de dossier avec une
-fonction annexe.
-merge_work_directory_I : De multiples problèmes ont fait que nous n'avons pas pu terminer. On a essayer de manipuler les appels de fonctions en vain, problème de
-typage.
+`clean_work_directory`: We were unable to handle the case of a versioned file to be preserved in subdirectories with an auxiliary function.
+`merge_work_directory_I`: Multiple issues prevented us from completing this. We attempted to manipulate function calls in vain, facing typing problems.
 
 Logs:
-Le dune runtest ne renvoyant rien, nous ne savons pas s'il y a des issues.
+Since `dune runtest` does not return anything, we do not know if there are any issues.
 
 Commands:
-Le dune runtest ne renvoyant rien avant ogit_checkout, nous ne savons pas s'il y a des issues avant cette fonction. Et nous avons pas pu finir le reste.
-On a eu des soucis avec dune pour le module In_channel.
+Since `dune runtest` did not return anything before `ogit_checkout`, we do not know if there are any issues before this function. We were unable to finish the rest. We had issues with `dune` for the `In_channel` module.
